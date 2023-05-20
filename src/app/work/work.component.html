@@ -1,0 +1,28 @@
+<div id="work_container" class="container pt-5 pb-5">
+    <div class="col mb-4">
+        <h4 style="text-align: center;">Work Experience</h4>
+        <a *ngIf="editOn" class="edit-icon text-primary p-1" href="">Edit</a>
+    </div>
+    <ul>
+    <li  *ngFor="let workExp of workExpList" class="row justify-content-center" style="height: 12rem;">
+        <div  class="card shadow  m-0 p-0 bg-white rounded" style="width: 50rem;position: absolute;margin-top: 5vh;">
+            <div class="row">
+              <div class="col-lg-3 pt-4 bg-success rounded" style="text-align: center;">
+                <div class="card-body">
+                    <h4 class="card-title text-light">{{workExp.company}}</h4>
+                    <p class="card-text text-light">{{workExp.year}}</p>
+                  </div>
+              </div>
+              <div class="col">
+                <div class="card-body">
+                  <h5 class="card-title">{{workExp.title}}</h5>
+                  <p class="card-text">{{workExp.address}}</p>
+                  <p class="card-text">{{workExp.description}}</p>
+                 </div>
+              </div>
+            </div>
+        </div>
+    </li>
+</ul>
+</div>
+        
